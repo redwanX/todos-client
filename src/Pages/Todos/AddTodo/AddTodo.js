@@ -59,7 +59,7 @@ const AddTodo = ({updateTasks}) => {
             </Form.Control.Feedback>
           </Form.Group>
           <Form.Group  className='mb-3' controlId="validationCustom04">
-            <Form.Control className='secondery-bg' name="desc" type="text" placeholder="Task Description" required />
+            <Form.Control as="textarea" rows={5}  className='secondery-bg' name="desc" type="text" placeholder="Task Description" required />
             <Form.Control.Feedback type="invalid">
               Please provide a valid Task Description.
             </Form.Control.Feedback>

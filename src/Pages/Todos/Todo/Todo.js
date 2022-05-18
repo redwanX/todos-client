@@ -33,7 +33,7 @@ export const Todo = ({task,deleteTask,completeTask}) => {
 
 
   return (
-    <div className={` todo d-flex flex-column flex-lg-row justify-content-between align-items-center rounded p-3 my-2 secondery-bg ${complete?"secondery-text":''}`}>
+    <div className={` text-lg-start fw-bold text-center todo d-flex flex-column flex-lg-row justify-content-between align-items-center rounded p-3 my-2 secondery-bg ${complete?"secondery-text":''}`}>
       <div>
         {complete?
         <>

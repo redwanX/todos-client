@@ -63,9 +63,12 @@ const Todos = () => {
         <AddTodo updateTasks={updateTasks}></AddTodo>
         <h3 className='text-secondary fw-bolder my-3 text-center'>ALL TASKS</h3>
         <hr />
-        
-        {tasks&& tasks.map(task=><Todo deleteTask={deleteTask} completeTask={completeTask} user={user} key={task._id} task={task}></Todo>)}
-    </div>
+        {tasks.length ===0 ?
+        <p className='primary-text fw-bold text-center'>You Don't Have Any Tasks.</p>
+        :
+        tasks.map(task=><Todo deleteTask={deleteTask} completeTask={completeTask} user={user} key={task._id} task={task}></Todo>)
+        }
+        </div>
   )
 }
 
