@@ -17,6 +17,9 @@ const Todos = () => {
     const deleteTask = id =>{
         setTasks(tasks.filter((task)=>task._id !==id));
     }
+    const completeTask = id =>{
+        setTasks(tasks.map((task)=>task._id ===id? {...task, complete : true}:task));
+    }
     const updateTasks =(newTask)=>{
         setTasks([...tasks,newTask])
     }
@@ -61,7 +64,7 @@ const Todos = () => {
         <h3 className='text-secondary fw-bolder my-3 text-center'>ALL TASKS</h3>
         <hr />
         
-        {tasks&& tasks.map(task=><Todo deleteTask={deleteTask} user={user} key={task._id} task={task}></Todo>)}
+        {tasks&& tasks.map(task=><Todo deleteTask={deleteTask} completeTask={completeTask} user={user} key={task._id} task={task}></Todo>)}
     </div>
   )
 }
