@@ -1,0 +1,4 @@
+.todo:hover{
+  background-color: rgb(212, 211, 211) !important;
+  transition: 0.3s;
+}

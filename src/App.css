@@ -23,5 +23,6 @@
   color: rgb(71 85 105) !important;
 }
 .secondery-bg{
+  transition: 0.3s;
   background-color: #EEEEEE !important;
 }
