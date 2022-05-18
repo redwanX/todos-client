@@ -12,7 +12,7 @@ export const Todo = ({task,deleteTask,completeTask}) => {
   const deleteCurrentTask = (id)=>{
     const confirm = window.confirm("Confirm Delete This Task?");
     if(confirm){
-    axios.delete(`http://localhost:5000/deleteTask/${id}`)
+    axios.delete(`https://calm-fortress-89939.herokuapp.com/deleteTask/${id}`)
     .then(res=>{
       toast("Task Deleted Succesfully!")
       deleteTask(id);
@@ -22,7 +22,7 @@ export const Todo = ({task,deleteTask,completeTask}) => {
   const completeCurrentTask = (id)=>{
     const confirm = window.confirm("Confirm Compleating This Task?");
     if(confirm){
-    axios.put(`http://localhost:5000/completeTask/${id}`)
+    axios.put(`https://calm-fortress-89939.herokuapp.com/completeTask/${id}`)
     .then(res=>{
       toast("Task Completed Succesfully!")
       completeTask(id);

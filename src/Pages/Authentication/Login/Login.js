@@ -29,7 +29,7 @@ const Login = () => {
       if(userAuthenticate){
         setTokenLoading(true);
         const email = userAuthenticate.email;
-        const {data}= await axios.post('http://localhost:5000/login',{email});
+        const {data}= await axios.post('https://calm-fortress-89939.herokuapp.com/login',{email});
         localStorage.setItem('authToken',data.token)
         setTokenLoading(false);
         navigate(from,{replace:true});
@@ -88,7 +88,7 @@ const Login = () => {
     };
   
     return (
-      <div style={{minHeight: 'calc(100vh - 116px - 74px)'}} className=' pt-5 col col-lg-6 col-12 mx-auto container'>   
+      <div style={{minHeight: 'calc(100vh - 116px - 16px)'}} className=' pt-5 col col-lg-6 col-12 mx-auto container'>   
         <h1 className='text-secondary fw-bolder'>LOGIN</h1>
         <hr />
         <Form noValidate validated={validated} onSubmit={handleSubmit}>

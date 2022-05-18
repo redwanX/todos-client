@@ -8,6 +8,8 @@ import { ToastContainer } from 'react-toastify';
 import Register from './Pages/Authentication/Register/Register';
 import 'react-toastify/dist/ReactToastify.css';
 import RequireAuth from './Pages/Authentication/RequireAuth/RequireAuth';
+import Footer from './Pages/Shared/Footer/Footer';
+import PageNotFound from './Pages/Shared/PageNotFound/PageNotFound';
 
 function App() {
   return (
@@ -18,8 +20,11 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/todos' element={<RequireAuth><Todos></Todos></RequireAuth>}></Route>
+        <Route path='*' element={<PageNotFound></PageNotFound>}></Route>
         </Routes>
         <ToastContainer></ToastContainer>
+        <Footer></Footer>
+
 
     </div>
   );

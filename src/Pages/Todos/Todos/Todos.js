@@ -28,7 +28,7 @@ const Todos = () => {
       if(user){
             setTasksloading(true);
             const email = user?.user?.email || user?.email;
-              axios.get(`http://localhost:5000/todos?email=${email}`,{
+              axios.get(`https://calm-fortress-89939.herokuapp.com/todos?email=${email}`,{
               headers:{authorization: `Bearer ${authToken}`}
             })
             .then(res=>{
@@ -57,7 +57,7 @@ const Todos = () => {
 
 
   return (
-    <div className='container'>
+    <div style={{minHeight: 'calc(100vh - 116px - 16px)'}} className='container'>
         <h1 className='text-secondary fw-bolder text-center'>TODOS</h1>
         <hr />
         <AddTodo updateTasks={updateTasks}></AddTodo>

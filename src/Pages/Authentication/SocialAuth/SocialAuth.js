@@ -26,7 +26,7 @@ const SocialAuth = () => {
       const tokenUpdate=async()=>{
         if(user){
           const email = user.user.email;
-          const {data}= await axios.post('http://localhost:5000/login',{email});
+          const {data}= await axios.post('https://calm-fortress-89939.herokuapp.com/login',{email});
           localStorage.setItem('authToken',data.token)
           navigate(from,{replace:true});
         }

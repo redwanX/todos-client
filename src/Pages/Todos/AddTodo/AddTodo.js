@@ -18,7 +18,7 @@ const AddTodo = ({updateTasks}) => {
             body = {email,...body};
             const confirm= window.confirm("Confirm Add This Task?")
             if(confirm){
-              axios.post(`http://localhost:5000/addtask`,body)
+              axios.post(`https://calm-fortress-89939.herokuapp.com/addtask`,body)
             .then(res=>{
                 toast("Added Task Succesfully");
                 body._id=res.data.insertedId;
